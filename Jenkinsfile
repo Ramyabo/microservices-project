@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'docker build -t ramyaboddu/project-1:v1 .'
+                 dir('src'){
+                    sh 'docker build -t ramyaboddu/project-1:v1 .'
+                }
             }
         }
 
